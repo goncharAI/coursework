@@ -1,0 +1,10 @@
+lemmatized
+lemmatized.csv
+my_parsed_data.csv
+nda.csv
+result.json
+temp.json
+__pycache__/
+.venv/
+.streamlit/
+.idea/
