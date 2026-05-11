@@ -1,15 +1,12 @@
-# nlp_utils.py
 from natasha import (
     Segmenter, MorphVocab, NewsEmbedding,
     NewsMorphTagger, NewsNERTagger, Doc
 )
 
-# Глобальный словарь для хранения моделей внутри каждого процесса
 nlp = {}
 
 
 def init_worker():
-    """Выполняется один раз при запуске каждого ядра процессора"""
     emb = NewsEmbedding()
     nlp['segmenter'] = Segmenter()
     nlp['morph_vocab'] = MorphVocab()
@@ -18,7 +15,6 @@ def init_worker():
 
 
 def lemmatize_batch(texts):
-    """Функция обработки батча текстов для лемматизации"""
     results = []
     for text in texts:
         if not text:
@@ -37,7 +33,6 @@ def lemmatize_batch(texts):
 
 
 def ner_batch(texts):
-    """Функция обработки батча текстов для извлечения локаций (NER)"""
     batch_locations = []
     for text in texts:
         doc = Doc(text)
