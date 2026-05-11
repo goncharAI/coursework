@@ -48,19 +48,16 @@ Telegram Data Analyzer — это интеллектуальное веб-при
 Шаги установки
 
     Клонируйте репозиторий:
-    code Bash
-
+    
     git clone https://github.com/goncharAI/coursework
     cd coursework
 
     Установите необходимые зависимости:
-    code Bash
-
+    
     pip install -r requirements.txt
 
     Запустите приложение:
-    code Bash
-
+    
     streamlit run ui.py
 
     Или просто запустите файл run.bat (для Windows).
